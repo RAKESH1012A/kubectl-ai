@@ -1,0 +1,72 @@
+Generate Kubernetes manifests using Kubectl OpenAI plugin
+
+Prerequisites
+
+Step 1: Generate OpenAI api-key:
+
+Visit OpenAI API Key and sign in / sign up and create a new secret key. 
+Copy and paste the key in a text file.
+
+
+
+Step 2: Download kubectl-ai binaries:
+
+Credits for sozercan and team for developing kubectl-ai plugin (Please find the repo link in Resources tab below)
+
+Check OS architecture using the “dpkg --print-architecture” command
+
+
+
+Visit Releases · sozercan/kubectl-ai and choose binaries based on your OS architecture
+
+
+
+
+
+Configuration:
+
+
+Step 1: Copy the secret-key generated in the prerequisite and export it as an environmental variable.
+
+export OPENAI_API_KEY=<your OpenAI key>
+
+
+
+Step 2: Unzip the binary files which you downloaded and move it to /usr/local/bin
+
+Unzip using “tar -xf kubectl-ai_linux_amd64.tar.gz” command
+Move the extracted files using “sudo mv kubectl-ai /usr/local/bin” command 
+
+
+Kubernetes Manifest Generation:
+
+Now we are ready to generate Kubernetes manifests using Kubectl OpenAI plugin
+Example 1: Generate nginx deployment object with 3 replicas 
+
+Command: kubectl ai "create an nginx deployment with 3 replicas"
+
+
+
+
+
+Example 2: Scale nginx deployment object to 5 replicas 
+
+Command: kubectl ai "scale nginx-deployment to 5 replicas"
+
+
+
+
+
+Resources
+
+The following resources were used in this article:
+
+Steps and commands are documented and uploaded in this repo (https://github.com/RAKESH1012A/kubectl-ai)
+Code on GitHub (https://github.com/sozercan/kubectl-ai)
+OpenAI API Keys (https://platform.openai.com/account/api-keys)
+
+
+
+
+
+
